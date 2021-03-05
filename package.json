@@ -1,0 +1,22 @@
+{
+  "name": "01searcher",
+  "version": "1.0.0",
+  "description": "a typescript program",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulspartan14/searcher.git"
+  },
+  "author": "Paul Alexander Mena Zapata",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.2.3"
+  },
+  "devDependencies": {
+    "ts-node": "^9.1.1"
+  }
+}
