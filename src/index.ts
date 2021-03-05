@@ -1,4 +1,4 @@
-/* 
+/*
 Busqueda lineal
 Busqueda binaria
 Searcher
@@ -17,7 +17,6 @@ el arreglo que se le paso antes.
 interface interfaceSearcher {
   search(number: number): number
 }
-
 
 class linealSearch implements interfaceSearcher {
 
@@ -48,7 +47,7 @@ class searchBinary implements interfaceSearcher {
     while(baja<=alta){
       media = Math.floor((baja + alta) / 2)
       if (this.numbers[media] === number){
-        media
+        return media
       }else if (this.numbers[media] < number) {
         baja = media + 1
       }else{
@@ -63,12 +62,12 @@ class Searcher {
   constructor(private Searcher: interfaceSearcher){}
 
   search(number: number): string {
-    return `el index de ${number}: ${this.Searcher.search(number)} `
+    return `el index de ${number}: ${this.Searcher.search(number)}`
   }
 }
 
 const array = [2,3,8,1,7]
-const searcher = new linealSearch(array)
+const searcher = new searchBinary(array)
 console.log(new Searcher(searcher).search(8))
 
 
