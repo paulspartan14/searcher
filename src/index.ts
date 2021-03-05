@@ -18,6 +18,7 @@ interface interfaceSearcher {
   search(number: number): number
 }
 
+
 class linealSearch implements interfaceSearcher {
 
   constructor(private numbers: number[]){}
@@ -26,15 +27,14 @@ class linealSearch implements interfaceSearcher {
     for(let [i, num] of this.numbers.entries()){
       if (num === number){
         return i;
-      }else{
-        return -1
       }
     }
+    return -1
   }
 
 }
 
-class linealBinary implements interfaceSearcher {
+class searchBinary implements interfaceSearcher {
   
   constructor(private numbers: number[]){
     this.numbers = this.numbers.sort((a, b) => a - b)
@@ -47,15 +47,15 @@ class linealBinary implements interfaceSearcher {
 
     while(baja<=alta){
       media = Math.floor((baja + alta) / 2)
-      if (this.numbers[media] < number){
-        baja = media + 1
+      if (this.numbers[media] === number){
+        media
       }else if (this.numbers[media] < number) {
         baja = media + 1
       }else{
         alta = media - 1
       }
-      return -1
     }
+    return -1
   }
 }
 
@@ -67,9 +67,8 @@ class Searcher {
   }
 }
 
-
 const array = [2,3,8,1,7]
-const searcher = new linealBinary(array)
+const searcher = new linealSearch(array)
 console.log(new Searcher(searcher).search(8))
 
 
