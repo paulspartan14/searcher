@@ -13,6 +13,9 @@ el arreglo que se le paso antes.
 
 #### run proyect
 
-`npm i`
-
-`npm run dev`
+```bash
+npm start
+``` 
+```bash
+npm start
+``` 
