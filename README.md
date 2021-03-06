@@ -14,8 +14,8 @@ el arreglo que se le paso antes.
 #### run proyect
 
 ```bash
-npm start
+npm i
 ``` 
 ```bash
-npm start
+npm run dev
 ``` 
